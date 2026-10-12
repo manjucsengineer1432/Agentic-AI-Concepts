@@ -3,11 +3,11 @@
 Agentic AI is an AI System that can work toward a goal by reasoning about what to do, choosing actions,using tools,observing results,and adjusting it in next steps.
 
 
-*** Tradional Chatbot *** 
+* Tradional Chatbot 
 Lets take Example: What is the weather?
 it will generate the response based on the information available to it.
 
-*** Agentic AI: ***
+* Agentic AI: 
 Lets take an Example: Plan my outdoor trip for tomorrow.
 AI agent:
 * Checks the weather forecast:
