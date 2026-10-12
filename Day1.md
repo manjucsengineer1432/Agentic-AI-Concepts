@@ -96,3 +96,24 @@ Python Interpreter  ->        Calculate or analyze data
 Database Query      ->        Retrieve Business records
 File Reader         ->        Inspect documents
 Email API           ->        Send Emails
+
+## Note:
+### Critical concept: 
+The model can request a tool call, but the surrounding program usually executes that tool and returns the result to the model.
+
+* For example, an LLM might request:
+{
+  "tool": "get_order_status",
+  "arguments": {
+    "order_id": "ORD123"
+  }
+}
+
+Your application validates the request, calls the real order API, and returns something like:
+{
+  "status": "delayed",
+  "expected_delivery": "2026-10-15"
+}
+
+The LLM can then use that result to decide what to do next.
+This is called tool calling or function calling.
