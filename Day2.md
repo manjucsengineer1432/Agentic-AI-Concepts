@@ -27,4 +27,26 @@ A vector is a list of numbers, such as:
 [0.12, -0.34,0.84,0.21]
 --> This is not real embeddings 
 
+* Step 3: Attention
 
+The transformer processes relationships betweem tokens.
+For example, it can learn that:
++ "customer" refers to the person making the request.
++ "refund" is the requested resolution
++ "damaged" explains why the customer wants the refund.
+
+The attention mechanism helps the model weigh relevent information from different positions in the input. It does not simply look at each word independently.
+
+* Step 4: Neural network processing:
+The input passes through multiple transformer layers. Each layer transforms the representations, helping the model capture increasingly useful patterns and relationships.
+
+The model does not lookup a fixed answer for every sentences. It uses patterns learned during trainng to calculate possible next token probabilitis.
+
+* Step 5: Next-token prediction 
+The model calculates a probability distribution over possible next tokens. 
+
+Suppose it starts answering:
+" The customer should.."
+The next token could be "receive", "contact","check", or something else, depending on the context and model.
+
+* The model selects a token according to its decoding settings and probability distribution. That token is added to the generated sequence, and the process continues until the model finishes.
